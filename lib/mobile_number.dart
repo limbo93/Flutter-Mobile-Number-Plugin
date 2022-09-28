@@ -14,7 +14,7 @@ class MobileNumber {
   static void listenPhonePermission(
     Function(bool isPermissionGranted) subscription,
   ) {
-    WidgetsBinding.instance.addObserver(
+    WidgetsBinding.instance?.addObserver(
       WidgetLifecycle(
         resumeCallBack: (() async {
           if (await MobileNumber.hasPhonePermission) {
